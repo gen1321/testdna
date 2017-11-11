@@ -28,10 +28,12 @@ gem 'devise'
 gem 'mysql2', '~> 0.3.18'
 gem 'slim-rails'
 gem 'omniauth-vkontakte'
+gem "fog-aws"
+gem 'carrierwave', '~> 1.0'
 gem 'pundit'
 group :development do
   gem 'better_errors'
-  gem 'foreman'
+  gem 'dotenv-rails'
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'guard-rspec'

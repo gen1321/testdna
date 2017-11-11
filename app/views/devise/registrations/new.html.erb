@@ -1,19 +1,39 @@
 <div class="authform">
   <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :role => 'form'}) do |f| %>
-    <h3>Sign up</h3>
+    <h3>Регистрация</h3>
     <%= devise_error_messages! %>
     <div class="form-group">
       <%= f.label :email %>
       <%= f.email_field :email, :autofocus => true, class: 'form-control' %>
     </div>
     <div class="form-group">
-      <%= f.label :password %>
+      <%= f.label "Пароль" %>
       <%= f.password_field :password, class: 'form-control' %>
     </div>
     <div class="form-group">
-      <%= f.label :password_confirmation %>
+      <%= f.label "Подтверждение Пароля" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
     </div>
-     <%= f.submit 'Sign up', :class => 'button right' %>
+    <div class="form-group">
+      <%= f.label "Имя" %>
+      <%= f.text_field :first_name, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label "Отчество" %>
+      <%= f.text_field :middle_name, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label "Фамилия" %>
+      <%= f.text_field :last_name, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label "Город" %>
+      <%= f.text_field :last_name, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label "Документ Подтверждаюший личность" %>
+      <%= f.file_field :document, class: 'form-control' %>
+    </div>
+     <%= f.submit 'Зарегестрироваться', :class => 'button right' %>
   <% end %>
 </div>

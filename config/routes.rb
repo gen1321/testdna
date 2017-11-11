@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
-  root to: 'visitors#index'
-  devise_for :users
+  unauthenticated :user do
+    devise_scope :user do
+      root to: 'devise/sessions#new'
+    end
+  end
+  authenticate :user do
+    root to: 'visitors#index'
+  end
+
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 end
