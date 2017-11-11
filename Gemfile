@@ -27,6 +27,8 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'devise'
 gem 'mysql2', '~> 0.3.18'
 gem 'slim-rails'
+gem 'omniauth-vkontakte'
+gem 'pundit'
 group :development do
   gem 'better_errors'
   gem 'foreman'
