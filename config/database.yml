@@ -14,8 +14,7 @@ development:
   reconnect: false
   database: testdna_development
   pool: 5
-  username: testdna
-  password:
+  username: root
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -27,8 +26,7 @@ test:
   reconnect: false
   database: testdna_test
   pool: 5
-  username: testdna
-  password:
+  username: root
   host: localhost
 
 production:
@@ -37,6 +35,5 @@ production:
   reconnect: false
   database: testdna_production
   pool: 5
-  username: testdna
-  password:
+  username: root
   host: localhost
