@@ -4,35 +4,35 @@
     <%= devise_error_messages! %>
     <div class="form-group">
       <%= f.label :email %>
-      <%= f.email_field :email, :autofocus => true, class: 'form-control' %>
+      <%= f.email_field :email, :autofocus => true, class: 'form-control', required: true %>
     </div>
     <div class="form-group">
       <%= f.label "Пароль" %>
-      <%= f.password_field :password, class: 'form-control' %>
+      <%= f.password_field :password, class: 'form-control', required: true %>
     </div>
     <div class="form-group">
       <%= f.label "Подтверждение Пароля" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
+      <%= f.password_field :password_confirmation, class: 'form-control', required: true %>
     </div>
     <div class="form-group">
       <%= f.label "Имя" %>
-      <%= f.text_field :first_name, class: 'form-control' %>
+      <%= f.text_field :first_name, class: 'form-control', required: true %>
     </div>
     <div class="form-group">
       <%= f.label "Отчество" %>
-      <%= f.text_field :middle_name, class: 'form-control' %>
+      <%= f.text_field :middle_name, class: 'form-control', required: true %>
     </div>
     <div class="form-group">
       <%= f.label "Фамилия" %>
-      <%= f.text_field :last_name, class: 'form-control' %>
+      <%= f.text_field :last_name, class: 'form-control', required: true %>
     </div>
     <div class="form-group">
       <%= f.label "Город" %>
-      <%= f.text_field :last_name, class: 'form-control' %>
+      <%= f.text_field :city, class: 'form-control', required: true %>
     </div>
     <div class="form-group">
       <%= f.label "Документ Подтверждаюший личность" %>
-      <%= f.file_field :document, class: 'form-control' %>
+      <%= f.file_field :document, class: 'form-control',  accept: "image/png,image/gif,image/jpeg, application/pdf", required: true %>
     </div>
      <%= f.submit 'Зарегестрироваться', :class => 'button right' %>
   <% end %>

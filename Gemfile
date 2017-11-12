@@ -1,3 +1,4 @@
+# coding: utf-8
 source 'https://rubygems.org'
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -29,6 +30,8 @@ gem 'mysql2', '~> 0.3.18'
 gem 'slim-rails'
 gem 'omniauth-vkontakte'
 gem "fog-aws"
+gem 'redis', '~> 3.0'
+gem 'active_model_serializers'
 gem 'carrierwave', '~> 1.0'
 gem 'pundit'
 group :development do
