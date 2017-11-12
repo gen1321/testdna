@@ -1,4 +1,5 @@
 # coding: utf-8
+
 class UsersAdminController < ApplicationController
   before_action :find_user
 
@@ -20,6 +21,6 @@ class UsersAdminController < ApplicationController
   private
 
   def find_user
-    @user = User.find(params[:id])
+    @user = User.friendly.find(params[:id])
   end
 end
