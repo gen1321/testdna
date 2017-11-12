@@ -4,9 +4,9 @@ feature 'Admin Users controller' do
       user = create(:user)
       another_user = create(:user)
       signin(user.email, user.password)
-      expect { visit approve_users_admin_path(another_user) }.to raise_error(Pundit::NotAuthorizedError)
-      expect { visit ban_users_admin_path(another_user) }.to raise_error(Pundit::NotAuthorizedError)
-      expect { visit cancel_users_admin_path(another_user) }.to raise_error(Pundit::NotAuthorizedError)
+      expect { visit approve_users_admin_path(another_user) }.to raise_error(ActionController::RoutingError)
+      expect { visit ban_users_admin_path(another_user) }.to raise_error(ActionController::RoutingError)
+      expect { visit cancel_users_admin_path(another_user) }.to raise_error(ActionController::RoutingError)
     end
   end
 

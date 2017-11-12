@@ -1,9 +1,10 @@
+# coding: utf-8
 
 feature 'Admin Dashboard' do
   scenario 'not user cant visit dashboard' do
     user = create(:user)
     signin(user.email, user.password)
-    expect { visit admin_path }.to raise_error(Pundit::NotAuthorizedError)
+    expect { visit admin_path }.to raise_error(ActionController::RoutingError)
   end
 
   context 'Admin' do

@@ -7,6 +7,11 @@ Rails.application.routes.draw do
     end
   end
 
+  authenticated :user, ->(u) { u.admin? } do
+    root to: 'admins#index'
+    get 'admin', to: 'admins#index'
+  end
+
   authenticated :user, ->(u) { u.waiting_for_approve? } do
     root to: 'visitors#wait'
   end
@@ -18,12 +23,12 @@ Rails.application.routes.draw do
   authenticated :user, ->(u) { u.declined? } do
     root to: 'visitors#declined'
   end
+
   authenticated :user, ->(u) { u.approved_soc? } do
     root to: 'visitors#approved_soc'
   end
 
   authenticate :user do
-    get '/admin', to: 'admins#index'
     resources :users_admin, only: [] do
       member do
         get :approve

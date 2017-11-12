@@ -24,7 +24,7 @@ group :development do
   gem 'web-console', '>= 3.3.0'
 end
 gem 'active_model_serializers'
-gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'carrierwave', '~> 1.0'
 gem 'devise'
 gem 'devise-i18n'
