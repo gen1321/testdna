@@ -51,7 +51,7 @@ App.room = App.cable.subscriptions.create("AdminNotificationsChannel", {
 });
 
 
-$(window).on('load', function () {
+$('#users').ready(function () {
   window.users_data.forEach(function (user) {
     $('#users').append(render_user(user))
   })
